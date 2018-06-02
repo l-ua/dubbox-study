@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>com.lu.study</groupId>
+    <artifactId>dubbox-study</artifactId>
+    <version>1.0.0</version>
+    <modules>
+        <!--供服务端实现，消费端调用的接口，这样只要服务端接口一改动，消费端就能知道-->
+        <module>dubbox-interface</module>
+        <!--  bean放入domain，这样bean就只会存一份，所有的服务都使用同一套bean，更加方便开发-->
+        <module>dubbox-domain</module>
+        <!-- 公共的服务，比如时间格式化。字符串工具类等-->
+        <module>dubbox-comon-services</module>
+        <!-- 提供服务者。在实际应用中，往往一个服务即是提供者。又是消费者-->
+        <module>dubbox-provider</module>
+        <!-- 消费者。在实际应用中，往往一个服务即是提供者。又是消费者-->
+        <module>dubbox-cosumer</module>
+    </modules>
+
+    <name>dubbox-study</name>
+    <packaging>pom</packaging>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+
+</project>
