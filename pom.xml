@@ -8,6 +8,7 @@
     <artifactId>dubbox-study</artifactId>
     <version>1.0.0</version>
     <modules>
+        <!--服务启动顺序，先把domain打包，在打包interface，然后在启动服务端，后启动消费端-->
         <!--供服务端实现，消费端调用的接口，这样只要服务端接口一改动，消费端就能知道-->
         <module>dubbox-interface</module>
         <!--  bean放入domain，这样bean就只会存一份，所有的服务都使用同一套bean，更加方便开发-->
